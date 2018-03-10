@@ -1,0 +1,8 @@
+.listhover:hover {
+	background-image: linear-gradient(to left, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+
+.listhover:active {
+	background-image: linear-gradient(to left, #b0bcff 0%, #f99df2 46%, #ffd5d5 100%);
+}
