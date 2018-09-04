@@ -2,7 +2,7 @@
   "name": "kikaku",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://april9288.github.io/myportfolio/",
+  "homepage": "https://april9288.github.io/kikaku/",
   "dependencies": {
     "ajv": "^6.5.3",
     "bootstrap": "^4.0.0",
