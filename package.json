@@ -1,8 +1,8 @@
 {
-  "name": "kikaku",
+  "name": "youMedia",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://april9288.github.io/kikaku/",
+  "homepage": "https://april9288.github.io/youMedia/",
   "dependencies": {
     "ajv": "^6.5.3",
     "bootstrap": "^4.0.0",
