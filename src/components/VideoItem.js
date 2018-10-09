@@ -21,7 +21,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const styles = {
   card: {
-    maxWidth: 350,
+    width: 350,
   },
   media:{
     width: 120,

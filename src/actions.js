@@ -9,7 +9,7 @@ export const requestVideosAction = (keyword) => (dispatch) => {
     dispatch({ type: "REQUEST_VIDEOS_PENDING" })
     const API_Key = process.env.REACT_APP_API_KEY_YOUTUBE;
     let searchTerm = keyword || "2018 javascript trends";
-    YoutubeFetch(searchTerm, {  maxResults: 5, key: API_Key })
+    YoutubeFetch(searchTerm, {  maxResults: 6, key: API_Key })
     .then(data => dispatch({ type: "REQUEST_VIDEOS_SUCCESS", payload: data }))
     .catch(error => dispatch({ type: "REQUEST_VIDEOS_FAILED", payload: true }))
 }
@@ -17,7 +17,7 @@ export const requestVideosAction = (keyword) => (dispatch) => {
 export const requestVideosActionfromRelated = (selectedVideo, keyword) => (dispatch) => {
     dispatch({ type: "REQUEST_VIDEOS_PENDING" })
     const API_Key = process.env.REACT_APP_API_KEY_YOUTUBE;
-    YoutubeFetch(keyword, {  maxResults: 5, key: API_Key })
+    YoutubeFetch(keyword, {  maxResults: 6, key: API_Key })
     .then(data => {
     	let newpayload = [];
         let fetchedData = data;
