@@ -3,7 +3,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(to left, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  background-color: #c06c84;
+/*  background: linear-gradient(to left, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);*/
 }
 
 
+.mainVideoContainer {
+	max-width: 500px;
+}
+
+@media only screen and (max-width: 580px) {
+	.mainVideoContainer {
+		max-width: 350px;
+	}
+}
