@@ -1,7 +1,13 @@
 {
-  "main.css": "static/css/main.71581c99.css",
-  "main.css.map": "static/css/main.71581c99.css.map",
-  "main.js": "static/js/main.a463ed68.js",
-  "main.js.map": "static/js/main.a463ed68.js.map",
-  "static\\media\\SEGA.woff": "static/media/SEGA.12a3db8b.woff"
+  "main.css": "/youMedia/static/css/main.9b666d8c.chunk.css",
+  "main.js": "/youMedia/static/js/main.cb0259b6.chunk.js",
+  "main.js.map": "/youMedia/static/js/main.cb0259b6.chunk.js.map",
+  "static/js/1.fc60b0c1.chunk.js": "/youMedia/static/js/1.fc60b0c1.chunk.js",
+  "static/js/1.fc60b0c1.chunk.js.map": "/youMedia/static/js/1.fc60b0c1.chunk.js.map",
+  "runtime~main.js": "/youMedia/static/js/runtime~main.fc7f0321.js",
+  "runtime~main.js.map": "/youMedia/static/js/runtime~main.fc7f0321.js.map",
+  "static/css/main.9b666d8c.chunk.css.map": "/youMedia/static/css/main.9b666d8c.chunk.css.map",
+  "index.html": "/youMedia/index.html",
+  "precache-manifest.a0c3781ae2c810e6cbae3b13a206faaa.js": "/youMedia/precache-manifest.a0c3781ae2c810e6cbae3b13a206faaa.js",
+  "service-worker.js": "/youMedia/service-worker.js"
 }
