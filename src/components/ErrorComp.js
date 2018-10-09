@@ -3,7 +3,7 @@ import './Footer.css';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
+
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({

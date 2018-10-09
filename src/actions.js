@@ -20,7 +20,9 @@ export const requestVideosActionfromRelated = (selectedVideo, keyword) => (dispa
     YoutubeFetch(keyword, {  maxResults: 5, key: API_Key })
     .then(data => {
     	let newpayload = [];
-    	newpayload.push(selectedVideo, ...data);
+        let fetchedData = data;
+        fetchedData = fetchedData.slice(1,5);
+    	newpayload.push(selectedVideo, ...fetchedData);
     	dispatch({ type: "REQUEST_VIDEOS_SUCCESS", payload: newpayload })
     })
     .catch(error => dispatch({ type: "REQUEST_VIDEOS_FAILED", payload: true }))
