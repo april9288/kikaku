@@ -9,10 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import { connect } from 'react-redux';
 import { requestVideosActionfromRelated } from '../actions';
 
-const mapStateToProps = (state) => {
-  return {};
-}
-
 const mapDispatchToProps = (dispatch) => {
   return {
     onrequestVideosActionfromRelated: (selectedVideo, keyword) => dispatch(requestVideosActionfromRelated(selectedVideo, keyword))
@@ -63,4 +59,4 @@ VideoItem.propTypes = {
 };
 
 const styledComponent = withStyles(styles)(VideoItem);
-export default connect(mapStateToProps, mapDispatchToProps)(styledComponent);
+export default connect(undefined, mapDispatchToProps)(styledComponent);

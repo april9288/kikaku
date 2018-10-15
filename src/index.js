@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
+import { createLogger } from 'redux-logger';
 import { searchFieldReducer, requestVideosReducer } from './reducers';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -25,8 +26,14 @@ const theme = createMuiTheme({
   },
 });
 
+const logger = createLogger();
+let middleware = [thunkMiddleware];
+if (process.env.NODE_ENV === 'development') { 
+  middleware.push(logger)
+};
+
 const rootReducers = combineReducers({searchFieldReducer, requestVideosReducer})
-const store = createStore(rootReducers, applyMiddleware(thunkMiddleware))
+const store = createStore(rootReducers, applyMiddleware(...middleware));
 
 ReactDOM.render(
 <MuiThemeProvider theme={theme}>
