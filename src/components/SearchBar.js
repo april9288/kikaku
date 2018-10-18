@@ -9,17 +9,10 @@ import { withStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 
 import { connect } from 'react-redux';
-import { searchFieldAction, requestVideosAction } from '../actions';
-
-const mapStateToProps = (state) => {
-  return {
-    searchField: state.searchFieldReducer.searchField,
-  }
-}
+import { requestVideosAction } from '../actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onsearchFieldAction: (event) => dispatch(searchFieldAction(event.target.value)),
     onrequestVideosAction: (searchField) => dispatch(requestVideosAction(searchField))
   }
 }
@@ -85,12 +78,12 @@ class SearchBar extends React.Component {
 
   enter = (event) => {
       if (event.key === "Enter") {
-        this.props.onrequestVideosAction(this.props.searchField);
+        this.props.onrequestVideosAction(event.target.value);
       }
     }
 
   render() {
-  const { classes, onsearchFieldAction } = this.props;
+  const { classes } = this.props;
 
   return (
     <div className={classes.root}>
@@ -105,7 +98,6 @@ class SearchBar extends React.Component {
               <SearchIcon />
             </div>
             <Input
-              onChange={onsearchFieldAction}
               onKeyPress={this.enter}
               placeholder="search videos"
               disableUnderline
@@ -126,6 +118,5 @@ SearchBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-const styledComponent = withStyles(styles)(SearchBar);
-export default connect(mapStateToProps, mapDispatchToProps)(styledComponent);
+export default connect(undefined, mapDispatchToProps)(withStyles(styles)(SearchBar));
 

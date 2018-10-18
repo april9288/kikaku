@@ -8,7 +8,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import { searchFieldReducer, requestVideosReducer } from './reducers';
+import { requestVideosReducer } from './reducers';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'development') {
   middleware.push(logger)
 };
 
-const rootReducers = combineReducers({searchFieldReducer, requestVideosReducer})
+const rootReducers = combineReducers({ requestVideosReducer })
 const store = createStore(rootReducers, applyMiddleware(...middleware));
 
 ReactDOM.render(

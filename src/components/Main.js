@@ -18,7 +18,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    onrequestVideosAction: (searchField) => dispatch(requestVideosAction(searchField))
+    onrequestVideosAction: () => dispatch(requestVideosAction())
   }
 }
 
